@@ -60,8 +60,59 @@ function showTestimonial() {
 // Iniciar el slider
 showTestimonial();
 
+//Modal Contactanos
+// Obtener el modal
+var modal = document.getElementById("contactModal");
 
+// Obtener el botón que abre el modal
+var btn = document.getElementById("contactButton");
 
+// Obtener el <span> que cierra el modal
+var span = document.getElementsByClassName("close")[0];
+
+// Cuando el usuario hace clic en el botón, abre el modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Cuando el usuario hace clic en <span> (x), cierra el modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Cuando el usuario hace clic fuera del modal, también se cierra
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+//Modal menu
+// Obtener el modal de menu
+var menuModal = document.getElementById("menuModal");
+
+// Obtener el botón que abre el modal de menu
+var menuButton = document.getElementById("menuButton");
+
+// Obtener el <span> que cierra el modal de menu
+var closeMenu = document.getElementsByClassName("close")[1];
+
+// Cuando el usuario hace clic en el botón, abre el modal de menu
+menuButton.onclick = function() {
+    menuModal.style.display = "block";
+}
+
+// Cuando el usuario hace clic en <span> (x), cierra el modal de menu
+closeMenu.onclick = function() {
+    menuModal.style.display = "none";
+}
+
+// Cuando el usuario hace clic fuera del modal, también se cierra
+window.onclick = function(event) {
+    if (event.target == menuModal) {
+        menuModal.style.display = "none";
+    }
+}
 
 
 
